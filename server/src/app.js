@@ -9,9 +9,10 @@ app.use(cors());
 
 const PORT = process.env.PORT ?? 8080;
 
-app.get('/status', (req, res) => {
+
+app.post('/register', (req, res) => {
     res.send({
-        test: 123
+        message: `Hello ${req.body.email}! You Registered`
     })
 })
 
